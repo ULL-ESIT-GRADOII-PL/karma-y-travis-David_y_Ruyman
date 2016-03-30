@@ -60,7 +60,8 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Firefox', 'Chrome', 'Safari', 'PhantomJS'],
+    // Se puede añadir a la lista 'Chrome', 'Safari' si no lo vamos a ejecutar en Travis
+    browsers: ['Firefox', 'PhantomJS'],
 
     // If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000,
