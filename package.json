@@ -15,7 +15,11 @@
     "url": "https://github.com/ULL-ESIT-GRADOII-PL/karma-y-travis-David_y_Ruyman.git"
   },
   "keywords": [
-    "conversor"
+    "mocha",
+    "chai",
+    "sinon",
+    "testing",
+    "javascript"
   ],
   "author": "Angel David Martin Rodriguez & Ruyman Rodriguez Martin",
   "license": "ISC",
@@ -36,6 +40,6 @@
     "karma-phantomjs-launcher": "*",
     "karma-html2js-preprocessor": "*",
     "karma-mocha": "*",
-    "mocha": "*",
+    "mocha": "*"
   }
 }
