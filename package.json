@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/ULL-ESIT-GRADOII-PL/karma-y-travis-David_y_Ruyman",
   "devDependencies": {
+    "gulp-gh-pages": "*",
     "chai": "~2.0.0",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
