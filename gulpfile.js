@@ -61,6 +61,9 @@ gulp.task('minify', function() {
   })).pipe(gulp.dest(dirTest));
   
   gulp.src('assets/images/*').pipe(gulp.dest(dirImages));
+  gulp.src('.travis.yml').pipe(gulp.dest(dirRoot));
+  gulp.src('package.json').pipe(gulp.dest(dirRoot));
+  gulp.src('.gitignore').pipe(gulp.dest(dirRoot));
 });
 
 /*
