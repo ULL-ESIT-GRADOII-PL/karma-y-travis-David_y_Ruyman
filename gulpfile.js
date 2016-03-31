@@ -44,7 +44,7 @@ gulp.task('minify', function() {
       minifyCSS: true
   })).pipe(gulp.dest(dirCss));
   
-  gulp.src(['vendor/*.js'])
+  gulp.src(['vendor/*.*'])
     .pipe(minify({
       collapseWhitespace: true,
       minify: true,
