@@ -1,5 +1,13 @@
+/* Este JavaScript lo usamos para probar las clases desarrolladas en
+*  práctica de POO.
+*/
 var expect = chai.expect;
 
+/* La clase medida es la padre de Longitud
+*  y de Temperatura tanto como de cualquier
+*  otro tipo que se pueda implementar como
+*  por ejemplo Volumen o Tiempo.
+*/
 describe("Medida", function() {
   describe("Constructor", function() {
     it("Debería tener un tipo y un valor", function() {
@@ -44,6 +52,9 @@ describe("Medida", function() {
   });
 });
 
+/*  Longitud es padre de cualquier tipo que
+*   represente una distancia de cualquier tipo.
+*/
 describe("Longitud", function() {
   describe("Constructor", function() {
     it("Debería tener un tipo y un valor", function() {
@@ -109,6 +120,10 @@ describe("Longitud", function() {
   });
 });
 
+/* Temperatura crea objetos para medir el Grado
+*  de frio o calor. Otras clases que pueden ser
+*  implementadas son Rankine o Grado Newton.
+*/
 describe("Temperatura", function() {
   describe("Constructor", function() {
     it("Debería tener un tipo y un valor", function() {
