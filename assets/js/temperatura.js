@@ -13,7 +13,7 @@
   // Clase Celsius
   function Celsius(valor)
   {
-    Temperatura.call(this, valor, "C");
+    Temperatura.call(this, valor, "C");  // Es un objeto temperatura con tipo C
 
     this.toFahrenheit = function() {
       return new Fahrenheit ((valor * 9/5) + 32);
@@ -32,7 +32,7 @@
   // Clase Fahrenheit
   function Fahrenheit(valor)
   {
-    Temperatura.call(this,valor,"F");
+    Temperatura.call(this,valor,"F");   // Es un objeto temperatura con tipo F
 
     this.toCelsius = function() {
       return new Celsius ((valor - 32) * 5/9);
@@ -50,7 +50,7 @@
 
   // Clase Kelvin
   function Kelvin(valor) {
-    Temperatura.call(this, valor, "K");
+    Temperatura.call(this, valor, "K");  // Es un objeto temperatura con tipo K
 
     this.toCelsius = function() {
       return new Celsius (valor - 273.15);
