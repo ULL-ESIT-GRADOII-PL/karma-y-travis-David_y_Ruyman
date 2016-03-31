@@ -18,3 +18,10 @@
 #### Ruymán Rodríguez Martín
   - Email: alu0100845235@ull.edu.es
   - [Página personal](http://alu0100845235.github.io)
+
+### Enlaces de Interes
+##### Karma
+- [Apuntes del Profesor](http://crguezl.github.io/pl-html/node10.html#SECTION041300160000000000000)
+- [Karma Travis CI](https://karma-runner.github.io/0.8/plus/Travis-CI.html)
+##### Travis
+- [Apuntes del Profesor(Ruby)](http://crguezl.github.io/apuntes-ruby/node326.html)
