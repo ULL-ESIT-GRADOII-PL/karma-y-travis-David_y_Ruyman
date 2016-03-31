@@ -22,42 +22,71 @@ gulp.task('minify', function() {
   
   gulp.src(['*.html', '*.js', '*.css'])
     .pipe(minify({
-      collapseWhitespace: true,
       minify: true,
+      collapseWhitespace: true,
+      conservativeCollapse: true,
       minifyJS: true,
-      minifyCSS: true
+      minifyCSS: true,
+      getKeptComment: function (content, filePath) {
+        var m = content.match(/\/\*![\s\S]*?\*\//img);
+        return m && m.join('\n') + '\n' || '';
+    }
   })).pipe(gulp.dest(dirRoot));
   
+  
+  gulp.src('assets/js/*').pipe(gulp.dest(dirJs));
+  /*
   gulp.src(['assets/js/*.js'])
     .pipe(minify({
-      collapseWhitespace: true,
       minify: true,
+      collapseWhitespace: true,
+      conservativeCollapse: true,
       minifyJS: true,
-      minifyCSS: true
+      minifyCSS: true,
+      getKeptComment: function (content, filePath) {
+        var m = content.match(/\/\*![\s\S]*?\*\//img);
+        return m && m.join('\n') + '\n' || '';
+    }
   })).pipe(gulp.dest(dirJs));
+  */
   
   gulp.src(['assets/css/*.css'])
     .pipe(minify({
-      collapseWhitespace: true,
       minify: true,
+      collapseWhitespace: true,
+      conservativeCollapse: true,
       minifyJS: true,
-      minifyCSS: true
+      minifyCSS: true,
+      getKeptComment: function (content, filePath) {
+        var m = content.match(/\/\*![\s\S]*?\*\//img);
+        return m && m.join('\n') + '\n' || '';
+    }
   })).pipe(gulp.dest(dirCss));
   
   gulp.src(['vendor/*.*'])
     .pipe(minify({
-      collapseWhitespace: true,
       minify: true,
+      collapseWhitespace: true,
+      conservativeCollapse: true,
       minifyJS: true,
-      minifyCSS: true
+      minifyCSS: true,
+      getKeptComment: function (content, filePath) {
+        var m = content.match(/\/\*![\s\S]*?\*\//img);
+        return m && m.join('\n') + '\n' || '';
+    }
   })).pipe(gulp.dest(dirVendor));
   
   gulp.src(['test/*.html', 'test/*.js'])
     .pipe(minify({
-      collapseWhitespace: true,
       minify: true,
+      collapseWhitespace: true,
+      conservativeCollapse: true,
       minifyJS: true,
-      minifyCSS: true
+      minifyCSS: true,
+      getKeptComment: function (content, filePath) {
+        var m = content.match(/\/\*![\s\S]*?\*\//img);
+        return m && m.join('\n') + '\n' || '';
+    }
   })).pipe(gulp.dest(dirTest));
   
   gulp.src('assets/images/*').pipe(gulp.dest(dirImages));
@@ -80,6 +109,6 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('deploy', function() {
-  return gulp.src('./minified/**/*')
+  return gulp.src('./minified/**/*', { dot: true })
   .pipe(ghPages());
 });
